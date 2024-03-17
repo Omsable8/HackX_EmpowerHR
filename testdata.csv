@@ -1,0 +1,11 @@
+Emp_ID,Age,Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,EducationField,Gender,HourlyRate,JobRole,MaritalStatus,MonthlyIncome,MonthlyRate,NumCompaniesWorked,OverTime,PercentSalaryHike,StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager
+147,32,No,Travel_Rarely,1100,Sales,20,Marketing,Male,90,Sales Executive,Married,6500,1900,2,Yes,11,80,0,8,0,Good,3,2,0,0
+258,40,Yes,Travel_Frequently,1400,Research & Development,15,Life Sciences,Female,60,Research Scientist,Single,4800,1500,1,No,14,80,1,10,3,Good,6,3,2,0
+369,29,No,Travel_Rarely,1000,Human Resources,10,Human Resources,Male,85,HR Representative,Married,5200,1700,3,Yes,13,80,0,4,2,Very Good,2,1,0,0
+402,35,No,Non-Travel,1300,Marketing,5,Marketing,Female,95,Marketing Director,Divorced,7800,2200,4,Yes,15,80,2,9,1,Excellent,9,6,0,0
+531,48,Yes,Travel_Rarely,950,Sales,45,Technical Degree,Male,65,Sales Executive,Married,5500,1800,2,No,12,80,0,12,5,Good,7,4,3,0
+675,37,No,Travel_Frequently,1200,Engineering,2,Engineering,Male,100,Software Engineer,Married,7200,2100,1,Yes,14,80,1,5,4,Excellent,6,3,2,2
+784,28,No,Non-Travel,1050,Human Resources,18,Human Resources,Female,80,HR Analyst,Single,5000,1600,2,No,11,80,0,3,2,Good,1,1,0,0
+890,42,No,Travel_Rarely,1150,Engineering,10,Engineering,Male,90,Data Scientist,Divorced,8000,2300,3,Yes,15,80,0,10,7,Excellent,5,4,1,1
+923,30,No,Travel_Frequently,1250,Finance,50,Finance,Female,105,Financial Analyst,Married,6800,2000,2,No,13,80,1,4,3,Good,4,2,1,0
+106,50,Yes,Non-Travel,850,Sales,32,Marketing,Male,70,Sales Representative,Married,4500,1400,1,No,10,80,0,15,9,Good,10,7,5,0

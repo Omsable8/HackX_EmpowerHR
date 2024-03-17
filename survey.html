@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Experience Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #caecf8;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form h4 {
+    margin-bottom: 10px;
+  }
+  
+  .form-check {
+    margin-bottom: 10px;
+  }
+  .submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: #c0eaf9;
+    color: black;
+    border: none;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+    </style>
+</head>
+<body>
+  <h1>SURVEY FORM</h1>
+  <center><p>(Based on the past corporate experience)</p></center>
+  <div class="container text-center">
+    <form id="document" >
+      <label for="fname">Employee ID:</label>
+      <input type="text" id="emp_ID" name="fname">
+      <h4>Q1. I felt a strong sense of connection to my work and a desire to do my best.</h4>
+      <select id="q1" class="form-select" aria-label="Default select example">
+        <option value="4">Highly Agree</option>
+        <option value=3 selected>Agree</option>
+        <option value="2">Disagree</option>
+        <option value="1">Highly Disagree</option>
+      </select>
+      <h4>Q2. I felt satisfied with the day-to-day tasks and responsibilities associated with my role.</h4>
+      <select id="q2" class="form-select" aria-label="Default select example">
+        <option value="4">Highly Agree</option>
+        <option value=3 selected>Agree</option>
+        <option value="2">Disagree</option>
+        <option value="1">Highly Disagree</option>
+      </select>
+      <h4>Q3. The work environment (e.g., resources, equipment, workspace) was conducive to performing my job effectively.</h4>
+      <select id="q3" class="form-select" aria-label="Default select example">
+        <option value="4">Highly Agree</option>
+        <option value=3 selected>Agree</option>
+        <option value="2">Disagree</option>
+        <option value="1">Highly Disagree</option>
+      </select>
+      <h4>Q4. I had positive and respectful relationships with my colleagues and supervisors.</h4>
+      <select id="q4" class="form-select" aria-label="Default select example">
+        <option value="4">Highly Agree</option>
+        <option value=3 selected>Agree</option>
+        <option value="2">Disagree</option>
+        <option value="1">Highly Disagree</option>
+      </select>
+      <h4>Q5. I was able to maintain a healthy balance between my work and personal life.</h4>
+      <select id="q5" class="form-select" aria-label="Default select example">
+        <option value="4">Highly Agree</option>
+        <option value="3" selected>Agree</option>
+        <option value="2">Disagree</option>
+        <option value="1">Highly Disagree</option>
+      </select>
+      <h4>Q6. I was expected to work a significant amount of overtime to complete my job duties.</h4>
+      <select id="q6" class="form-select" aria-label="Default select example">
+        <option value="1">Yes</option>
+        <option value="2" selected>No</option>
+      </select>
+      <label for="query" class="form-label"><h4>Q7. Please share any additional comments or feedback you have about your past corporate experience. This could include specific positive or negative aspects of your experience, or suggestions for improvement.</h4></label>
+      <input type="text" id="emp_comments" name="fname" style="height: 50px; width: 600px"><br>
+      <br>
+      <br>
+      <div class="mb text-center"></div>
+      <div class="submit-button text text-center">
+        
+      <div class="btn">
+        <button type="submit" class="submit-button" onclick="getData(); saveData()" style="text-align: center;">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function getData() {
+    // Approach ONE ------------------------------
+    event.preventDefault(); 
+    var empID = document.getElementById("emp_ID").value;
+    var q1 = document.getElementById("q1").value;
+    var q2 = document.getElementById("q2").value;
+    var q3 = document.getElementById("q3").value;
+    var q4 = document.getElementById("q4").value;
+    var q5 = document.getElementById("q5").value;
+    var q6 = document.getElementById("q6").value;
+    var q7 = document.getElementById("emp_comments").value;
+    let userAnswers = {
+      empID,
+      q1,
+      q2,
+      q3,
+      q4,
+      q5,
+      q6,
+      q7
+    };
+    console.log(userAnswers);
+    var myArray = userAnswers;
+    localStorage.setItem("myArray", JSON.stringify(myArray));
+    
+
+    //Approach TWO -----------------------------
+    /*const formData = new FormData(document.getElementById('document'));
+      const values = Array.from(formData.values());
+      const csvData = values.join(',') + '\n';
+
+      fetch('emp_survey_db.csv')
+        .then(response => response.text())
+        .then(existingData => {
+          const updatedData = existingData.trim() + csvData;
+          const blob = new Blob([updatedData], { type: 'text/csv' });
+          const anchor = document.createElement('a');
+          anchor.href = window.URL.createObjectURL(blob);
+          anchor.download = 'emp_survey_db.csv';
+          anchor.click();
+        })
+        .catch(error => console.error('Error fetching CSV file:', error));
+        */
+        //window.location.href = "dashboard.html";
+        
+    return true; 
+
+    
+  }
+  
+  </script>
+</body>
+</html>
